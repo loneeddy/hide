@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="icon" href="https://loneeddy.github.io/imglink/loneeddyLogo.png"
-    type="image/ico" />
+  <link rel="icon" href="https://loneeddy.github.io/imglink/loneeddyLogo.png" type="image/ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>loneeddy</title>
   <style>
@@ -20,13 +19,21 @@
 </head>
 <body>
   <div> 
-    <iframe id="myframe" class="responsive-iframe" src="" allowFullScreen></iframe>
+    <!-- Allow camera and fullscreen access -->
+    <iframe
+      id="myframe"
+      class="responsive-iframe"
+      src=""
+      allow="camera; microphone; fullscreen; clipboard-read; clipboard-write"
+      allowfullscreen
+    ></iframe>
   </div>
+
   <script>
     const apps = new URL(window.location);
     const formUrl = apps.searchParams.get('apps');
-    const url = decodeURIComponent(formUrl)
-          document.getElementById('myframe').src = url
+    const url = decodeURIComponent(formUrl);
+    document.getElementById('myframe').src = url;
   </script>
 </body>
 </html>
